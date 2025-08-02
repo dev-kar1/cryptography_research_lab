@@ -1,0 +1,35 @@
+% Packages
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode} % For pseudocode commands
+\usepackage[]{mdframed} %for boxex
+\graphicspath{ {./images/} }
+% Theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{result}[theorem]{Result}
+
+% Define Color
+\definecolor{rose}{rgb}{1.0, 0.0, 0.56}
+
+% Defined Commands
+\newcommand{\lattice}{\mathcal{L}}
+\newcommand{\blue}{\textcolor{blue}}
+\newcommand{\red}{\textcolor{red}}
+\newcommand{\green}{\textcolor{green}}
+\newcommand{\rose}{\textcolor{rose}}
+\newcommand{\ip}[1]{\left\langle#1\right\rangle}
+\newcommand{\round}[1]{\left\lfloor#1\right\rceil}
+\newcommand{\succmin}{\lambda_1(\lattice)}
+\newcommand{\basis}{\bf{b_1,b_2,\cdots,b_n}}
+\newcommand{\gs}{\bf{b_1^*,b_2^*,\cdots,b_n^*}} %Gram Schmidt orthogonal vectors
+\newcommand{\muij}{\frac{\langle {\bf b_i},{\bf b_j^*}\rangle}{\langle{\bf b_j^*},{\bf b_j^*}\rangle}}
