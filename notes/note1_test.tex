@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+\input{preamble}
+
+% Custom header
+\title{Results}
+\author{Your Namer\\
+Cryptography Research Lab\\
+Indian Institute of Science Education and Research Bhopal}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\maketitle
+\begin{center}
+\large \textcolor{blue}{Lecture #1}
+\end{center}
+
+
+\section{Title 1}
+Some notes over here
+\begin{enumerate}
+    \item Two bases $\blue{B_1},\rose{B_2}$ generating the same lattice $\lattice$ are related by $\rose{B_2}=\blue{B_1}U$ where $U$ is an unimodular matrix.
+    \item If $B=\{\rose{ \gs }\}$ is the Gram Schmidt basis then $\det( \lattice )=\rose{\prod_{i=1}^n ||{ \bf {b_i^*}}||}$
+    \item \rose{\bf (Hadamard's Inequality)} If $\blue{B=\{\basis}\}$ is the basis of lattice $\lattice$ then $$\det(\lattice)\le \blue{||b_1||\times ||b_2||\times \cdots \times||b_n||} $$
+    \item  Let $B$ be a rank-n lattice basis, and $B^*$ be its Gram-Schmidt orthogonalisation, then $$\lambda_1(B)\ge\min_{1\le i\le n}\{||\ve{b_j ^*}||\}$$
+    \item \rose{\bf (Blichfield)} For a full rank lattice $\lattice$ and a measurable set $S\subseteq\mathbb{R}^n$ such that $vol(S)>\det ({\lattice})$ there exist $x,y\in S$ such that $x-y\in \lattice$  
+    \item \rose{\bf (Minkowski's Convex Body Theorem)} For a full rank lattice $\lattice$ and a centrally convex and symmetric set $S$ with $Vol(S)>2^n \det (\lattice)$, $S$ contains at least one non-zero lattice point.
+    \item \rose{\bf (Minkowski's First Theorem)} For any full rank lattice $\lattice$ of rank $n$
+    $$\lambda_1(\lattice) \le \sqrt{n}(\det{\lattice})^{1/n}$$
+    \item  \rose{\bf (Minkowski's Second Theorem)} For a full rank lattice $\lattice$
+    $$\left(\prod_{i=1}^{n}\lambda_{i}\right)^{1/n}\le \sqrt{n}\cdot (\det (\lattice))^{1/n}$$
+    \item In a 2-dimensional lattice $\lattice$ with rank $2$. If $\lambda$ is the length of the shortest vector in the lattice, then
+    $$\lambda \le \sqrt{\frac{2}{\sqrt3}\det{(\lattice)}}$$
+    \item  Let $b_1,b_2$ be the initial vectors of an iteration of the algorithm and let $b_1'=b_2-mb_1$ and $b_2'=b_1$ be next set of vectors considered in the GLRA. Then except for possibly the last two iterations $$||\ve{b_1'}||<\frac{||\ve{b_1}||^2}{3}$$
+    \item  If $b_1,b_2$ are some iterations of vectors in the {\bf GLRA} with $||b_1||\le ||b_2||$ and $m=\round{\frac{\ip{b_2,b_1}}{\ip{b_1,b_1}}}$ then for all $k\in \mathbb{Z}$ we have $$||b_2-mb_1||\le ||b_2-kb_1||$$
+    \item If $b_1,b_2$ are some iterations of vectors in the {\bf GLRA} with $||b_1||\le ||b_2||$ and $m=\round{\frac{\ip{b_2,b_1}}{\ip{b_1,b_1}}}$ with $b_1'=b_2-mb_1$ and $b_2'=b_1$ then $||b_1'||\le ||k'b_2'+b_1'||$ for all $k\in \mathbb{Z}$
+    \item  If $m=\pm 1$ then the GLRA algorithm terminates in the next step.
+    \item   Let $\lattice \subset \mathbb{R}^2$ be a two dimensional lattice basis with vectors $b_1,b_2$
+    \begin{enumerate}
+        \item The {\bf GLRA} terminates and yields a good basis.
+        \item Final vector $b_1$ is the shortest vector in the lattice $\lattice$, so the algorithm solves the shortest vector problem in two dimensions.
+        \item The angle $\theta $ between $b_1,b_2$ satisfies $|\cos{\theta}|\le \frac{||b_1||}{2||b_2||}$
+    \end{enumerate}
+    \item Let $b_1,b_2,\cdots b_n \in \mathbb{R}^n$ be a $\delta-\text{LLL}$ reduced basis. Then 
+    $$||b_1||\le \left(\frac{2}{\sqrt{4\delta-1}}\right)^{n-1}\succmin$$
+\end{enumerate}
+
+\begin{mdframed}
+\centering
+    \rose{Some Important things that you might want to include inside this frame.}
+\end{mdframed
+
+
+\openproblem{Can the fast Fourier transform be computed in o(n log n) time?}
+\begin{thebibliography}{9}
+
+
+
+\bibitem{Regev}
+Oded Regev,
+\textit{Lecture Notes on Lattices in Computer Science},
+Tel Aviv University, Fall 2009.
+
+\bibitem{Vaikuntanathan}
+Vinod Vaikuntanathan,
+\textit{Advanced Topics in Cryptography: From Lattices to Program Obfuscation},
+MIT, Fall 2024.
+\bibitem{}
+Deng, Xinyue \textit{An Introduction to Lenstra-Lenstra-Lovasz Lattice Basis Reduction Algorithm}, Massachusetts Institute of Technology, 2016 
+
+\bibitem{}
+Galbraith, S. D. \textit{Mathematics of public key cryptography} Cambridge University Press, 2012  
+\end{thebibliography}
+
+\end{document}
