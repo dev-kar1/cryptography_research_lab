@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+% Define Color
+\definecolor{rose}{rgb}{1.0, 0.0, 0.56}
+% Defined Commands
+\newcommand{\mycomment}[1]{}
+\newcommand{\lattice}{\mathcal{L}}
+\newcommand{\blue}{\textcolor{blue}}
+\newcommand{\red}{\textcolor{red}}
+\newcommand{\green}{\textcolor{green}}
+\newcommand{\rose}{\textcolor{rose}}
+%\newcommand{\doublecheckb}{\blue{\checkmark\kern-0.55em\checkmark}}
+%\newcommand{\doublecheckr}{\red{\checkmark\kern-0.55em\checkmark}}
+\begin{document}
+
+
+\begin{tikzpicture}[scale = 1]
+	\draw [line width = 1, red, ->] (-1,2.5)node[left] {$k$} -- (1,2.5) -- (1,2.1);
+	\draw [line width = 1, red, ->] (-1,1)node[left] {$m$} -- (-0.1,1);
+	\draw [line width = 1, red, ->] (2.1,1) -- (2.5,1)node[right] {$c$};
+	\fill [rose!30] (0,0) rectangle (2,2);
+	\draw[step=2cm, thin,fill = blue] (0,0) grid (2,2);
+	\node  at (1,1) {\blue{\huge \bf Enc}} ;
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+\end{document}
