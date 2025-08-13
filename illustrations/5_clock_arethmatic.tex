@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}[scale=1]
+  % Draw the clock face circle
+  \draw[thick] (0,0) circle [radius = 1];
+
+  % Draw hour marks and numbers
+  \foreach \angle in {0,30,...,330} {
+    \draw[thick] (\angle:0.9cm) -- (\angle:1cm); % Hour ticks
+  }
+  \foreach \num/\angle in {12/90,1/60,2/30,3/0,4/330,5/300,6/270,7/240,8/210,9/180,10/150,11/120} {
+    \node at (\angle:0.75cm) {\num};
+  }
+
+  % Draw the clock center
+  \fill (0,0) circle (0.03cm);
+
+  % Example hands showing a time, e.g., 8 o'clock (mod 12)
+  % Hours hand (pointing at 8)
+  \draw[thick, red] (0,0) -- (150:0.5cm);
+  % Minutes hand (pointing at 0 minutes)
+  \draw[thick, blue] (0,0) -- (90:0.8cm);
+
+  % Label to illustrate clock arithmetic
+  \node[below=1cm, align=center] at (0,0) {
+    $\textcolor{red}{10} + \textcolor{blue}{12} = 10 \pmod {12}$\\
+    \textbf{Clock Arithmetic} }
+\end{tikzpicture}
+
+\end{document}
