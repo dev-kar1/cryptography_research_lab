@@ -1,0 +1,35 @@
+\documentclass{beamer}
+\usepackage{tikz}
+% Define Color
+\definecolor{rose}{rgb}{1.0, 0.0, 0.56}
+% Defined Commands
+\newcommand{\mycomment}[1]{}
+\newcommand{\lattice}{\mathcal{L}}
+\newcommand{\blue}{\textcolor{blue}}
+\newcommand{\red}{\textcolor{red}}
+\newcommand{\green}{\textcolor{green}}
+\newcommand{\rose}{\textcolor{rose}}
+%\newcommand{\doublecheckb}{\blue{\checkmark\kern-0.55em\checkmark}}
+%\newcommand{\doublecheckr}{\red{\checkmark\kern-0.55em\checkmark}}
+\begin{document}
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[scale = 0.5]
+
+
+	\draw[fill=blue!30] (0,0) -- (4,0) -- (2,2) -- cycle;
+
+	\node at (2,1) {Bob};
+	\fill [pink] (2,3) circle [radius = 1];
+	\draw [line width =1, red] (1,0) -- (0.25,-1.5);
+	\draw [line width =1, red] (3,0) -- (3.75,-1.5);
+	\draw [line width =1, red] (2,2) -- (0.5,1.5);
+	\draw [line width =1, red] (2,2) -- (3.5,1.5);
+	\fill [blue] (1.6,3.2) circle [radius = 0.1];
+	\fill [blue] (2.3,3.2) circle [radius = 0.1];
+
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+\end{document}
